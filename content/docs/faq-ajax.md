@@ -68,7 +68,7 @@ class MyComponent extends React.Component {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
-    } else {
+    } else if(this.props.data) {
       return (
         <ul>
           {items.map(item => (
